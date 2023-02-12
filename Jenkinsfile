@@ -13,7 +13,7 @@ pipeline {
 
 			steps {
 
-			sh 'scp ${WORKSPACE}/* ec2-user@${staging_server}:/var/www/html/'
+			sh 'scp -r ${WORKSPACE}/* ec2-user@${staging_server}:/var/www/html/'
 		
 	
 		      }	
