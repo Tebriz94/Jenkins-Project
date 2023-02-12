@@ -11,11 +11,14 @@ pipeline {
 
 		stage("Deploy to Remote Apache Server"){
 
+			steps {
+
 			sh 'scp ${WORKSPACE}/* ec2-user@${staging_server}:/var/www/html/'
 		
+	
+		      }	
 
 		}
-
 
 	}
 
